@@ -5,7 +5,7 @@ public class HomeWork {
 
         int a = 7;
         int b = 9;
-        a-=b;
+        a-=b+1;
         b= b+a;
         a= b-a ;
         System.out.println("a=");
