@@ -65,10 +65,10 @@ public class HomeWork3 {
         Scanner newNumbers = new Scanner(System.in);
         System.out.println("Ввести в строку два" +
                 "числа и символ - или + или % или / или * ");
-        int newNumber1 = Integer.parseInt(newNumbers.next());
-        int newNumber2 = Integer.parseInt(newNumbers.next());
+        double newNumber1 = Integer.parseInt(newNumbers.next());
+        double newNumber2 = Integer.parseInt(newNumbers.next());
         String newSign3 = (newNumbers.next());
-        int newResult = newSign3.equals("-") ? newNumber1 - newNumber2
+        double newResult = newSign3.equals("-") ? newNumber1 - newNumber2
                 : newSign3.equals("+") ? newNumber1 + newNumber2
                 : newSign3.equals("%") ? newNumber1 % newNumber2
                 : newSign3.equals("*") ? newNumber1 * newNumber2
