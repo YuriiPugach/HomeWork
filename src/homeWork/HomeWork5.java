@@ -50,7 +50,7 @@ public class HomeWork5 {
                 }
 
             }
-            if (!numberExist) {
+            if (numberExist != true) {
                 arrayNumbers[arrayCount] = newUserNumber;
                 arrayCount++;
             } else {
