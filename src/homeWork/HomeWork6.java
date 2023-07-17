@@ -8,8 +8,8 @@ public class HomeWork6 {
 
     public static void main(String[] args) {
 //        Задача 1
-            Scanner newScanner = new Scanner(System.in);
-            Random randomNumbers = new Random();
+        Scanner newScanner = new Scanner(System.in);
+        Random randomNumbers = new Random();
             System.out.println("Введите размерность двухмерного массива");
             int rowCount = Integer.parseInt(newScanner.next());
             int columnCount = Integer.parseInt(newScanner.next());
@@ -35,51 +35,51 @@ public class HomeWork6 {
 //        Задача 2
 
         String[][] arrayTask2 = {
-                {"0","1","2","3","4","5"},
-                {"1","-","-","-","-","-"},
-                {"2","-","-","-","-","-"},
-                {"3","-","-","-","-","-"},
-                {"4","-","-","-","-","-"},
-                {"5","-","-","-","-","-"}};
-        int botRow = randomNumbers.nextInt(1,5);
-        int botColum = randomNumbers.nextInt(1,5);
+                {"0", "1", "2", "3", "4", "5"},
+                {"1", "-", "-", "-", "-", "-"},
+                {"2", "-", "-", "-", "-", "-"},
+                {"3", "-", "-", "-", "-", "-"},
+                {"4", "-", "-", "-", "-", "-"},
+                {"5", "-", "-", "-", "-", "-"}};
+        int botRow = randomNumbers.nextInt(1, 5);
+        int botColum = randomNumbers.nextInt(1, 5);
         System.out.println("All Set. Get ready to rumble!");
         arrayShow(arrayTask2);
-    while (true)
-    {
+        while (true) {
 
             System.out.println("введите ряд от 1 до 5");
             int userRow = newScanner.nextInt();
-            if (userRow <= 0 || userRow > 5 )
-            {
+            if (userRow <= 0 || userRow > 5) {
                 System.out.println("wrong number");
                 continue;
             }
-            System.out.println("введите столбец от 1 до 5");
-            int userColumn = newScanner.nextInt();
-        if (userColumn <= 0 || userColumn > 5 )
-        {
-            System.out.println("wrong number");
-            continue;
+            int userColumn;
+            while (true) {
+                System.out.println("введите столбец от 1 до 5");
+                userColumn = newScanner.nextInt();
+                if (userColumn <= 0 || userColumn > 5) {
+                    System.out.println("wrong number");
 
-        }
-            arrayTask2[userRow][userColumn] = "*";
-        if (arrayTask2[botRow][botColum] == "*")
-        {
-            arrayTask2[botRow][botColum] = "x";
-            System.out.println("You have won!");
-            arrayShow(arrayTask2);
-
-            break;
-        }
-
-        arrayShow(arrayTask2);
-    }
+                } else {
+                    break;
+                }
             }
-    static void arrayShow(String[][] array)
-    {
-        for (String[] string : array)
-        {
+            arrayTask2[userRow][userColumn] = "*";
+            if (arrayTask2[botRow][botColum] == "*") {
+                arrayTask2[botRow][botColum] = "x";
+                System.out.println("You have won!");
+                arrayShow(arrayTask2);
+                break;
+            }
+
+            arrayShow(arrayTask2);
+        }
+
+
+    }
+
+    static void arrayShow(String[][] array) {
+        for (String[] string : array) {
             System.out.print("(");
             for (String word : string) {
                 System.out.print(word + ", ");
@@ -87,5 +87,5 @@ public class HomeWork6 {
             System.out.println("\b\b)");
         }
     }
-    }
+}
 
