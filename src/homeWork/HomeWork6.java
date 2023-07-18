@@ -80,11 +80,11 @@ public class HomeWork6 {
 
     static void arrayShow(String[][] array) {
         for (String[] string : array) {
-            System.out.print("(");
-            for (String word : string) {
-                System.out.print(word + ", ");
+            System.out.print("| ");
+            for (String targetMap : string) {
+                System.out.print(targetMap + " | ");
             }
-            System.out.println("\b\b)");
+            System.out.println("\b\b|");
         }
     }
 }
