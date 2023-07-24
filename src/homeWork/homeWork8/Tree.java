@@ -27,10 +27,9 @@ public class Tree {
     }
 
     public Tree(String type) {
+        this();
         this.type = type;
-        this.height = 350;
-        this.countOfSticks = 29;
-        this.colour = "Желтый";
+
     }
     @Override
     public String toString() {
