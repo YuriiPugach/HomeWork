@@ -10,8 +10,9 @@ public class Calculator {
 
     public void start(){
         Calculator usingOfCalculator = new Calculator();
+        System.out.println("Calculator is ready!");
         while(true) {
-            System.out.println("Calculator is ready!\nEnter some simbols");;
+            System.out.println("Enter some simbols");
             Scanner newScanner = new Scanner(System.in);
             String value1 = newScanner.nextLine();
             if(value1.contentEquals("Stop"))
