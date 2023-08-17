@@ -27,8 +27,8 @@ private Cassier cassier;
     public void returnCost() {
         System.out.println("Уважаемый "+ client.getClientName() + ", "
         + "продавец "+ cassier.getName() +" нашего магазина " + this.name +", "
-                + ((cassier.isHonest()!=false && product.isAlcohol()!=false)? " Вам не продадут этот товар." : "продаст вам этот товар "+ product.getName() +", "
-                + "в них есть алкогольная продукция, а ваш возраст "+ client.getAge() + ". "
-                + "Стоимость вашей покупки равна "+ ((client.isDiscount()!=false)? "Вот вам скидка 10 процентов "+ product.getProductPrice()*0.9: product.getProductPrice())));
+                + ((cassier.isHonest()!=false && product.isAlcohol()!=false)? " Вам не продаст этот товар." : "продаст вам этот алкогольный товар  "+ product.getName() +", "
+                + " ваш возраст "+ client.getAge() + ". "
+                + "Стоимость вашей покупки равна "+ ((client.isDiscount()!=false)? "со скидкой 10 процентов "+ product.getProductPrice()*0.9: product.getProductPrice())));
     }
 }

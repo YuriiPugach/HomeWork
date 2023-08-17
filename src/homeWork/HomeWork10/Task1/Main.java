@@ -6,8 +6,8 @@ public class Main {
 
 
         Product product = new Product("Garage", true, 150);
-        Client client = new Client("Vasiliy", 18, true);
-        Cassier cassier = new Cassier("Liudmila", true);
+        Client client = new Client("Vasiliy", 17, false);
+        Cassier cassier = new Cassier("Liudmila", false);
         Shop shop = new Shop("ATB", product, client, cassier);
 
         shop.returnCost();
